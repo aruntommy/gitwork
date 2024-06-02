@@ -8,6 +8,6 @@ class LogicController extends Controller
 {
    public function index(){
     $name = 'ajith';
-   return view('basic',compact('name'));
+   return view('welcome',compact('name'));
    }
 }
