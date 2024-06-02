@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Students;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class StudentsController extends Controller
 {
@@ -21,7 +22,7 @@ class StudentsController extends Controller
         [
             'name' =>'required|string|max:20',
             'dob' =>'required',
-            'course' =>'required',
+            'course' =>'required|string',
         ]
 
       );
