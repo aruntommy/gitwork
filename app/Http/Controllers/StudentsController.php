@@ -25,8 +25,13 @@ class StudentsController extends Controller
         ]
 
       );
-     Students::create($data);
-     echo 'data saved successfully';
+     $std = Students::create($data);
+        if($std){
+             echo 'data saved successfully';
+        }else{
+            echo 'error occured';
+        }
+
      Mail::send('Html.view', $data, function ($message) {
          $message->from('john@johndoe.com', 'John Doe');
          $message->sender('john@johndoe.com', 'John Doe');
