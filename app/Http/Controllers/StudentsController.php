@@ -25,7 +25,12 @@ class StudentsController extends Controller
         ]
 
       );
-     Students::create($data);
-     echo 'data saved successfully';
+     $std = Students::create($data);
+        if($std){
+             echo 'data saved successfully';       
+        }else{
+            echo 'error occured';
+        }
+     
     }
 }
