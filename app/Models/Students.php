@@ -13,5 +13,7 @@ class Students extends Model
         'dob',
         'course',
     ];
-
+public function users(){
+    return $this->belongsTo(User::class);
+}
 }
