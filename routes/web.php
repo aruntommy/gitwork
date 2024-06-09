@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LogicController;
 use App\Http\Controllers\StudentsController;
+use App\Livewire\Counter;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', [LogicController::class,'index']);
 Route::get('/get-students', [StudentsController::class,'getAllStudents']);
 Route::get('/create', [StudentsController::class,'create']);
 Route::post('/store', [StudentsController::class,'store']);
+Route::get('/counter', Counter::class);
